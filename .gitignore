@@ -1,0 +1,65 @@
+# ==========================================
+# Dependency directories
+# ==========================================
+node_modules/
+jspm_packages/
+web_modules/
+vendor/
+venv/
+.venv/
+
+# ==========================================
+# Build outputs and compiled code
+# ==========================================
+dist/
+build/
+out/
+bin/
+*.o
+*.pyc
+*.class
+
+# ==========================================
+# Environment variables and secrets
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
+credentials.json
+
+# ==========================================
+# Logs and databases
+# ==========================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+*.sqlite
+
+# ==========================================
+# Operating System Files
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ==========================================
+# IDEs and Code Editors
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# IntelliJ / WebStorm / PyCharm
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
