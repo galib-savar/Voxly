@@ -92,13 +92,19 @@ export const updateProfileController = async (req, res) => {
 
     const { profileBio, website, location, github, linkedin, twitter } =
       req.body;
+
+    const normalizeOptionalString = (value) => {
+      if (typeof value !== "string") return value;
+      return value.trim();
+    };
+
     const updateData = {
-      profileBio,
-      website,
-      location,
-      github,
-      linkedin,
-      twitter,
+      profileBio: normalizeOptionalString(profileBio),
+      website: normalizeOptionalString(website),
+      location: normalizeOptionalString(location),
+      github: normalizeOptionalString(github),
+      linkedin: normalizeOptionalString(linkedin),
+      twitter: normalizeOptionalString(twitter),
     };
 
     // Handle profile logo upload

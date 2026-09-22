@@ -32,10 +32,15 @@ const profileSchema = new mongoose.Schema(
       type: String,
       trim: true,
       default: "",
-      match: [
-        /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/.*)?$/,
-        "Please enter a valid website URL",
-      ],
+      validate: {
+        validator(value) {
+          return (
+            value === "" ||
+            /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/.*)?$/.test(value)
+          );
+        },
+        message: "Please enter a valid website URL",
+      },
     },
 
     location: {
