@@ -63,20 +63,20 @@ export const uploadToImageKit = async (imageKit, file, fileName, folder) => {
     }
 
     const fileBuffer = getFileBuffer(file);
-    const tempPath = file.path;
+    const tempPath = file?.path;
 
     try {
         const uploadResponse = await imageKit.upload({
             file: fileBuffer,
             fileName,
-            folder
+            folder,
+            useUniqueFileName: false,
         });
 
         return uploadResponse;
     } catch (error) {
         throw new Error(`ImageKit upload failed: ${error.message}`);
     } finally {
-        // Always cleanup temporary file after upload attempt
         cleanupTempFile(tempPath);
     }
 };
