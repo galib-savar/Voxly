@@ -9,7 +9,7 @@ export const formatCount = (num) => {
 export const formatEmail = (email) => {
   if (!email) return "";
 
-  const [username] = email.split("@");
+  const username = email.split("@")[0]?.split(".")[0];
   return username ? `@${username}` : "";
 };
 
