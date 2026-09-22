@@ -8,22 +8,22 @@ export default defineConfig({
   server: {
     proxy: {
       "/post": {
-        target: "https://voxly-backend-sooty.vercel.app/-sooty.vercel.app/",
+        target: "https://voxly-backend-sooty.vercel.app",
         changeOrigin: true,
         secure: false,
       },
       "/auth": {
-        target: "https://voxly-backend-sooty.vercel.app/",
+        target: "https://voxly-backend-sooty.vercel.app",
         changeOrigin: true,
         secure: false,
       },
       "/profile": {
-        target: "https://voxly-backend-sooty.vercel.app/",
+        target: "https://voxly-backend-sooty.vercel.app",
         changeOrigin: true,
         secure: false,
       },
       "/comments": {
-        target: "https://voxly-backend-sooty.vercel.app/",
+        target: "https://voxly-backend-sooty.vercel.app",
         changeOrigin: true,
         secure: false,
       },
