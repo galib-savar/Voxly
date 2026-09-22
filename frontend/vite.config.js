@@ -8,22 +8,22 @@ export default defineConfig({
   server: {
     proxy: {
       "/post": {
-        target: "http://localhost:3000",
+        target: "https://voxly-backend-sooty.vercel.app/-sooty.vercel.app/",
         changeOrigin: true,
         secure: false,
       },
       "/auth": {
-        target: "http://localhost:3000",
+        target: "https://voxly-backend-sooty.vercel.app/",
         changeOrigin: true,
         secure: false,
       },
       "/profile": {
-        target: "http://localhost:3000",
+        target: "https://voxly-backend-sooty.vercel.app/",
         changeOrigin: true,
         secure: false,
       },
       "/comments": {
-        target: "http://localhost:3000",
+        target: "https://voxly-backend-sooty.vercel.app/",
         changeOrigin: true,
         secure: false,
       },
