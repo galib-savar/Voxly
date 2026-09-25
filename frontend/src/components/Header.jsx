@@ -142,7 +142,7 @@ const Header = () => {
           )}
           <UserName name={user.name} email={user.email} />
         </section>
-      ) : (
+      ) : user ? null : (
         <section className="flex flex-col gap-gap-large">
           <Button onClick={() => setActivePopup("signup")}>
             {isMenuOpen ? "Sign Up" : <SignUpIcon />}
