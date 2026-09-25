@@ -26,7 +26,7 @@ const Popup = ({
   return (
     <dialog
       ref={dialogRef}
-      className={`bg-background rounded-radius relative overflow-y-auto m-auto w-1/2 max-w-1/2 Border ${className}`}
+      className={`bg-background rounded-radius relative overflow-y-auto m-auto w-full lg:max-w-1/2 Border ${className}`}
       onClick={(event) => {
         if (event.target === event.currentTarget) onClose?.();
       }}

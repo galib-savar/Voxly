@@ -80,7 +80,7 @@ const Header = () => {
         className={`flex items-center gap-gap-small ${isMenuOpen ? "p-padding-large" : "justify-center"}`}
       >
         <Image
-          onClick={toggleMenu}
+          onClick={() => (window.innerWidth > 768 ? toggleMenu() : null)}
           src="/Logo.svg"
           alt="Voxly logo"
           width={45}
@@ -142,7 +142,7 @@ const Header = () => {
           )}
           <UserName name={user.name} email={user.email} />
         </section>
-      ) : isMenuOpen ? (
+      ) : (
         <section className="flex flex-col gap-gap-large">
           <Button onClick={() => setActivePopup("signup")}>
             {isMenuOpen ? "Sign Up" : <SignUpIcon />}
@@ -152,7 +152,7 @@ const Header = () => {
             {isMenuOpen ? "Sign In" : <SignInIcon />}
           </Button>
         </section>
-      ) : null}
+      )}
       <Popup open={activePopup !== null} onClose={closePopup}>
         {activePopup === "signup" ? (
           <SignUp onClose={closePopup} onSuccess={setUser} />
